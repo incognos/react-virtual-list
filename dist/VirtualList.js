@@ -24,7 +24,7 @@ var VirtualList = React.createClass({
             itemBuffer: 0
         };
     },
-    getVirtualState: function (props) {
+    getVirtualState: function (props, initial) {
         // default values
         var state = {
             items: [],
@@ -33,7 +33,7 @@ var VirtualList = React.createClass({
         };
 
         // early return if nothing to render
-        if (typeof props.container === 'undefined' || props.items.length === 0 || props.itemHeight <= 0) return state;
+        if (typeof props.container === 'undefined' || props.items.length === 0 || props.itemHeight <= 0 || initial) return state;
 
         var items = props.items;
 
@@ -60,7 +60,7 @@ var VirtualList = React.createClass({
         return state;
     },
     getInitialState: function () {
-        return this.getVirtualState(this.props);
+        return this.getVirtualState(this.props, true);
     },
     shouldComponentUpdate: function (nextProps, nextState) {
         if (this.state.bufferStart !== nextState.bufferStart) return true;
