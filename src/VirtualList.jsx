@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var utils = require('./utils');
 
 var VirtualList = React.createClass({
@@ -75,7 +76,7 @@ var VirtualList = React.createClass({
         };
     },
     _getListBox: function(nextProps) {
-        var list = this.getDOMNode();
+        var list = ReactDOM.findDOMNode(this);
 
         var top = utils.topDifference(list, nextProps.container);
         
