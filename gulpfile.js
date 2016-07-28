@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
-var react = require('gulp-react');
+var babel = require('gulp-babel');
 
 function handleError(err) {
     console.error(err);
@@ -10,7 +10,9 @@ function handleError(err) {
 gulp.task('jsx', function() {
     return gulp.src('./src/*.jsx')
         .on('error', handleError)
-        .pipe(react())
+        .pipe(babel({
+            presets: ['react']
+        }))
         .pipe(gulp.dest('./dist'));
 });
 
