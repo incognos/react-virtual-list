@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var utils = require('./utils');
+var _ = require('lodash');
 
 var VirtualList = React.createClass({
     propTypes: {
@@ -130,8 +131,9 @@ var VirtualList = React.createClass({
         return this.state.items;
     },
     render: function() {
+        var props = _.omit(this.props, 'items', 'itemHeight', 'renderItem', 'container', 'tagName', 'scrollDelay', 'itemBuffer');
         return (
-        <this.props.tagName {...this.props} style={{boxSizing: 'border-box', height: this.state.height, paddingTop: this.state.bufferStart }} >
+        <this.props.tagName {...props} style={{boxSizing: 'border-box', height: this.state.height, paddingTop: this.state.bufferStart }} >
             {this.state.items.map(this.props.renderItem)}
         </this.props.tagName>
         );

@@ -3,6 +3,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 var React = require('react');
 var ReactDOM = require('react-dom');
 var utils = require('./utils');
+var _ = require('lodash');
 
 var VirtualList = React.createClass({
     displayName: 'VirtualList',
@@ -134,9 +135,10 @@ var VirtualList = React.createClass({
         return this.state.items;
     },
     render: function () {
+        var props = _.omit(this.props, 'items', 'itemHeight', 'renderItem', 'container', 'tagName', 'scrollDelay', 'itemBuffer');
         return React.createElement(
             this.props.tagName,
-            _extends({}, this.props, { style: { boxSizing: 'border-box', height: this.state.height, paddingTop: this.state.bufferStart } }),
+            _extends({}, props, { style: { boxSizing: 'border-box', height: this.state.height, paddingTop: this.state.bufferStart } }),
             this.state.items.map(this.props.renderItem)
         );
     }
