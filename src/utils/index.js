@@ -1,4 +1,4 @@
-export const areArraysEqual = (a, b) => {
+export function areArraysEqual(a, b) {
     if (!a || !b) return false;
 
     if (a.length != b.length) return false;
@@ -9,16 +9,16 @@ export const areArraysEqual = (a, b) => {
     return true;
 }
 
-export const topDifference = (element, container) => {
+export function topDifference(element, container) {
     return topFromWindow(element) - topFromWindow(container);
 }
 
-export const topFromWindow = (element) => {
+export function topFromWindow(element) {
     if (!element || element === window) return 0;
     return element.offsetTop + topFromWindow(element.offsetParent);
 }
 
-export const viewTop = (element) => {
+export function viewTop(element) {
     var viewTop;
     if (element === window) {
         viewTop = window.pageYOffset;
@@ -32,7 +32,7 @@ export const viewTop = (element) => {
     return (viewTop == null) ? 0 : viewTop;
 }
 
-export const debounce = (func, wait, immediate) => {
+export function debounce(func, wait, immediate) {
     if (!wait) return func;
 
 	var timeout;

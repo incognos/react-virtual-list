@@ -6,11 +6,11 @@
   "directories": {
     "test": "test"
   },
- "scripts": {
+  "scripts": {
     "build-npm": "./build_helpers/buildNPMInternals.sh",
     "publish-package": "./build_helpers/publishPackage.sh",
     "build": "./build_helpers/buildDist.sh",
-    "test": "jasmine-node test --verbose --matchall"
+    "test": "karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,9 @@
     "render",
     "scroll"
   ],
-  "authors": ["developerdizzle, incognos"],
+  "authors": [
+    "developerdizzle, incognos"
+  ],
   "bugs": {
     "url": "https://github.com/incognos/react-virtual-list/issues"
   },
@@ -51,26 +53,26 @@
     "babel-register": "^6.3.13",
     "babel-runtime": "^6.3.19",
     "bundle-loader": "^0.5.2",
-    "css-loader": "^0.9.1",
     "extract-text-webpack-plugin": "^0.3.8",
     "faker": "^2.1.2",
     "file-loader": "^0.8.1",
     "glob": "^4.3.5",
     "html-loader": "^0.2.3",
-    "less": "^2.2.0",
-    "less-loader": "^2.0.0",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "jasmine-node": "^1.14.5",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-webpack": "^1.8.0",
     "marked": "^0.3.2",
     "null-loader": "^0.1.0",
-    "postcss": "^4.0.2",
-    "postcss-custom-properties": "3.0.1",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
-    "react-docgen": "^1.2.0",
     "react-tools": "^0.12.2",
-    "style-loader": "^0.8.3",
     "url-loader": "^0.5.5",
     "webpack": "^1.8.3",
-    "webpack-dev-server": "^1.8.0",
-    "jasmine-node": "^1.14.5"
+    "webpack-dev-server": "^1.8.0"
   }
 }
