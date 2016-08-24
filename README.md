@@ -54,5 +54,4 @@ Use `npm test` to run the tests using [jasmine-node](https://github.com/mhevery/
 
 ## To Do
 
-* ES6/2015
 * [Known issue with mobile scroll event](https://github.com/developerdizzle/react-virtual-list/issues/1)
