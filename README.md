@@ -11,7 +11,7 @@ This React component allows you to display a large list of fixed-height items in
 You can use NPM to install react-virtual-list:
 
 ```console
-$ npm install react-virtual-list --save
+$ npm install react-virtual-list-ng --save
 ```
 
 ## Usage
