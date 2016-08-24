@@ -1,20 +1,18 @@
 {
   "name": "react-virtual-list-ng",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Super simple virtualized list React component",
-  "main": "dist/VirtualList.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "dist/react-virtual-list.js",
+  "directories": {},
   "scripts": {
     "build-npm": "./build_helpers/buildNPMInternals.sh",
-    "publish-package": "./build_helpers/publishPackage.sh",
+    "publish": "./build_helpers/publishPackage.sh",
     "build": "./build_helpers/buildDist.sh",
     "test": "karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/incognos/react-virtual-list-ng.git"
+    "url": "https://github.com/incognos/react-virtual-list.git"
   },
   "keywords": [
     "react",
@@ -29,7 +27,8 @@
   "bugs": {
     "url": "https://github.com/incognos/react-virtual-list/issues"
   },
-  "homepage": "https://github.com/incognos/react-virtual-list-ng",
+  "homepage": "https://github.com/incognos/react-virtual-list",
+  "license": "MIT",
   "peerDependencies": {
     "lodash": "^4.14.0",
     "react": "^0.14.0 || ^15.0.0",

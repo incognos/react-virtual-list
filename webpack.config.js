@@ -34,9 +34,9 @@ if (process.env.COMPRESS) {
       output: {comments: false}
     })
   );
-  entry['react-virtual-list-ng.min'] = mainEntryPoints;
+  entry['react-virtual-list'] = mainEntryPoints;
 } else {
-  entry['react-virtual-list-ng'] = mainEntryPoints;
+  entry['react-virtual-list'] = mainEntryPoints;
 }
 
 plugins.push(

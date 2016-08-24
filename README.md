@@ -1,4 +1,4 @@
-# [react-virtual-list](http://developerdizzle.github.io/react-virtual-list/) [![Build Status](https://travis-ci.org/developerdizzle/react-virtual-list.svg?branch=master)](https://travis-ci.org/developerdizzle/react-virtual-list)
+# [react-virtual-list](http://developerdizzle.github.io/react-virtual-list/) [![Build Status](https://travis-ci.org/incognos/react-virtual-list.svg?branch=master)](https://travis-ci.org/incognos/react-virtual-list)
 
 Super simple virtualized list [React](https://github.com/facebook/react) component
 

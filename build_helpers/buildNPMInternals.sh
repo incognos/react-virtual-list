@@ -45,4 +45,4 @@ function processFile(fileName) {
   }
 }
 
-glob.sync(path.join(__dirname, '../src/**/*.js')).forEach(processFile);
+glob.sync(path.join(__dirname, '../src/*.js')).forEach(processFile);
