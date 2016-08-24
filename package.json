@@ -6,7 +6,7 @@
   "directories": {},
   "scripts": {
     "build-npm": "./build_helpers/buildNPMInternals.sh",
-    "publish": "./build_helpers/publishPackage.sh",
+    "publish-package": "./build_helpers/publishPackage.sh",
     "build": "./build_helpers/buildDist.sh",
     "test": "karma start --single-run --browsers PhantomJS"
   },
