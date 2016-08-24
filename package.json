@@ -1,6 +1,6 @@
 {
   "name": "react-virtual-list-ng",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Super simple virtualized list React component",
   "main": "dist/react-virtual-list.js",
   "directories": {},
